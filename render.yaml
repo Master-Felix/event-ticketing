@@ -8,11 +8,11 @@ services:
       - key: APP_ENV
         value: production
       - key: APP_DEBUG
-        value: false
+        value: "false"
       - key: DB_HOST
         fromDatabase:
           name: event_ticketing
-          property: connectionString
+          property: host
       - key: DB_NAME
         fromDatabase:
           name: event_ticketing
