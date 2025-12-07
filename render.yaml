@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: event-ticketing
+    env: php
+    buildCommand: ./build.sh
+    startCommand: php -S 0.0.0.0:10000 -t public
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: DB_HOST
+        fromDatabase:
+          name: event_ticketing
+          property: host
+      - key: DB_NAME
+        fromDatabase:
+          name: event_ticketing
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: event_ticketing
+          property: user
+      - key: DB_PASS
+        fromDatabase:
+          name: event_ticketing
+          property: password

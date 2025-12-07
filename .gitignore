@@ -1,0 +1,41 @@
+# Dependency directories
+/vendor/
+/node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-*
+
+# Logs
+*.log
+
+# Local configuration overrides
+config/local.php
+
+# Cache
+/cache/
+/tmp/
+
+# Composer
+composer.lock
+composer.phar
+
+# Build output
+/build/
+
+# Local development
+*.local.php
+
+# SQL dumps (except the initial schema)
+*.sql
+!event_ticketing.sql
