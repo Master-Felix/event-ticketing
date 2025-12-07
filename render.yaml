@@ -1,9 +1,10 @@
 services:
   - type: web
     name: event-ticketing
-    env: php
-    buildCommand: ./build.sh
-    startCommand: php -S 0.0.0.0:10000 -t public
+    env: docker
+    plan: free
+    buildCommand: ""
+    startCommand: ""
     envVars:
       - key: APP_ENV
         value: production
@@ -25,3 +26,7 @@ services:
         fromDatabase:
           name: event_ticketing
           property: password
+
+databases:
+  - name: event_ticketing
+    plan: free
